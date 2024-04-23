@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Counter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2 id="pageTitle">Character Counter</h2>
+    <textarea id="textInput" placeholder="Enter text here..."></textarea>
+    <div id="result"></div>
+    <button id="anyCharacterBtn" onclick="setMode(MODE_ANY_CHARACTER)">Count any character</button>
+    <button id="nonWhitespaceBtn" onclick="setMode(MODE_NON_WHITESPACE)">Count non-whitespace characters</button>
+    <button id="lettersOnlyBtn" onclick="setMode(MODE_LETTERS_ONLY)">Count letters only</button>
+    <button id="nonWhitespacePunctuationBtn" onclick="setMode(MODE_NON_WHITESPACE_PUNCTUATION)">Count non-whitespace and non-punctuation characters</button>
+    <div>
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('zh-Hant')">中文</button>
+    </div>
+</div>
+<script src="characterCounter.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+

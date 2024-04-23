@@ -1,0 +1,18 @@
+{
+    "en": {
+      "title": "Character Counter",
+      "placeholder": "Enter text here...",
+      "any_character": "Count any character",
+      "non_whitespace": "Count non-whitespace characters",
+      "letters_only": "Count letters only",
+      "non_whitespace_punctuation": "Count non-whitespace and non-punctuation characters"
+    },
+    "zh-Hant": {
+      "title": "字符計數器",
+      "placeholder": "在這裡輸入文字...",
+      "any_character": "計算任何字符",
+      "non_whitespace": "計算非空白字符",
+      "letters_only": "僅計算字母字符",
+      "non_whitespace_punctuation": "計算非空白和非標點字符"
+    }
+}  
