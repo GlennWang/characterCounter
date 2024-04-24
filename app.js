@@ -1,11 +1,12 @@
 let language = 'en'; // 預設語言為英文
+let langData;
 
 // 加載語言文件
 function loadLanguage() {
     fetch('lang.json')
         .then(response => response.json())
         .then(data => {
-            const langData = data[language];
+            langData = data[language];
             document.title = langData.title;
             document.getElementById('pageTitle').textContent = langData.title;
             document.getElementById('textInput').placeholder = langData.placeholder;
@@ -13,6 +14,7 @@ function loadLanguage() {
             document.getElementById('nonWhitespaceBtn').textContent = langData.non_whitespace;
             document.getElementById('lettersOnlyBtn').textContent = langData.letters_only;
             document.getElementById('nonWhitespacePunctuationBtn').textContent = langData.non_whitespace_punctuation;
+            updateCharacterCount();
         });
 }
 
@@ -32,7 +34,7 @@ const characterCounter = new CharacterCounter(MODE_LETTERS_ONLY);
 function updateCharacterCount() {
     const text = textInput.value;
     const characterCount = characterCounter.countCharacters(text);
-    result.textContent = `字符數：${characterCount}`;
+    result.textContent = `${langData.count}：${characterCount}`;
 }
 
 // 切換模式
